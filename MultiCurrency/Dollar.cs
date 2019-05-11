@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MultiCurrency
+﻿namespace MultiCurrency
 {
     public class Dollar : Money
     {
@@ -9,9 +7,6 @@ namespace MultiCurrency
             this.amount = amount;
         }
 
-        public Dollar Times(int multiplier)
-        {
-            return new Dollar(amount * multiplier);
-        }
+        public override Money Times(int multiplier) => new Dollar(amount * multiplier);
     }
 }
